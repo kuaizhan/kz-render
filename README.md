@@ -9,7 +9,7 @@ kz-render
 
 ---
 
-# 测试方法
+## 测试方法
 
 ```
   node example/test.js
