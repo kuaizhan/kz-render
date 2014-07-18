@@ -77,16 +77,8 @@
             "version": "1.0",
             "deletable": true,
             "value": {
-                "items": [
-                    {
-                        "width": "50%",
-                        "content": ""
-                    },
-                    {
-                        "width": "50%",
-                        "content": ""
-                    }
-                ],
+                "left_width": "50%",
+                "right_width": "50%",
                 "_containers_":{
                     "left_col":{
                         "name":"left_col",

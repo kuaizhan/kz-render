@@ -1,6 +1,6 @@
 {
     "head": [
-        {
+       {
             "type":"refer",
             "value":{
                 "path": "./example/page_ref_partial.json"
