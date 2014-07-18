@@ -1,11 +1,9 @@
 [
     {
-        "title": "\u7cfb\u7edf\u63d2\u4ef6\u5305",
         "components": [
             {
 
                 "ename": "system_plugin\/text",
-                "name": "text",
                 "data_config": {
                     "align": {
                         "default": "left",
@@ -87,17 +85,6 @@
                     },
                     "margin-top": {
                         "category": "style",
-                        "widget": {
-                            "opt": {
-                                "content": {
-                                    "type": "margin"
-                                },
-                                "name": "chk_margin"
-                            },
-                            "data_name": "margin-top",
-                            "type": "switchrow",
-                            "label": "\u8c03\u6574\u8fb9\u8ddd"
-                        },
                         "required": false,
                         "type": "string"
                     },
@@ -252,17 +239,6 @@
                         "type": "string"
                     },
                     "margin-top": {
-                        "widget": {
-                            "opt": {
-                                "content": {
-                                    "type": "margin"
-                                },
-                                "name": "chk_margin"
-                            },
-                            "data_name": "margin-top",
-                            "type": "switchrow",
-                            "label": "\u8c03\u6574\u8fb9\u8ddd"
-                        },
                         "required": false,
                         "type": "string"
                     },
@@ -374,14 +350,6 @@
                     },
                     "tel": {
                         "default": "",
-                        "widget": {
-                            "opt": {
-                                "placeholder": "\u8bf7\u8f93\u5165\u7535\u8bdd\u53f7\u7801"
-                            },
-                            "data_name": "tel",
-                            "type": "text",
-                            "label": "\u7535\u8bdd\u53f7\u7801"
-                        },
                         "required": true,
                         "type": "string",
                         "vd_rules": {
@@ -390,14 +358,6 @@
                     },
                     "text": {
                         "default": "\u8054\u7cfb\u7535\u8bdd",
-                        "widget": {
-                            "opt": {
-                                "placeholder": "\u8bf7\u8f93\u5165\u6309\u94ae\u6587\u5b57"
-                            },
-                            "data_name": "text",
-                            "type": "text",
-                            "label": "\u6309\u94ae\u6807\u9898"
-                        },
                         "required": true,
                         "type": "string",
                         "vd_rules": {
@@ -707,15 +667,6 @@
                         "type": "string"
                     },
                     "text": {
-                        "widget": {
-                            "opt": {
-                                "theme": "simple",
-                                "class": "mod-link"
-                            },
-                            "data_name": "text",
-                            "type": "richtext",
-                            "label": "\u94fe\u63a5\u6587\u5b57"
-                        },
                         "vd_msg": {
                             "*": "",
                             "chlength_too_long": "\u94fe\u63a5\u6587\u5b57\u4e0d\u80fd\u8d85\u8fc7100\u4e2a\u5b57",
@@ -754,17 +705,6 @@
                     },
                     "margin-top": {
                         "category": "style",
-                        "widget": {
-                            "opt": {
-                                "content": {
-                                    "type": "margin"
-                                },
-                                "name": "chk_margin"
-                            },
-                            "data_name": "margin-top",
-                            "type": "switchrow",
-                            "label": "\u8c03\u6574\u8fb9\u8ddd"
-                        },
                         "required": false,
                         "type": "string"
                     },
@@ -788,63 +728,7 @@
                 },
                 "title": "\u94fe\u63a5",
                 "font_icon": "&#xe02c;",
-                "html": "<div class=\"mod mod-link {{theme}}\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};background:{{background}}\"> <h2><a href=\"{{link}}\">{{text}}<\/a><\/h2><\/div>",
-                "eid": "8",
-                "version": "2.0.3",
-                "widgets": {
-                    "style": [
-                        {
-                            "opt": {
-                                "content": {
-                                    "type": "margin"
-                                },
-                                "name": "chk_margin"
-                            },
-                            "data_name": "margin-top",
-                            "type": "switchrow",
-                            "label": "\u8c03\u6574\u8fb9\u8ddd"
-                        }
-                    ],
-                    "property": [
-                        {
-                            "opt": {
-                                "theme": "simple",
-                                "class": "mod-link"
-                            },
-                            "data_name": "text",
-                            "type": "richtext",
-                            "label": "\u94fe\u63a5\u6587\u5b57"
-                        },
-                        {
-                            "data_name": "link"
-                        },
-                        {
-                            "data_name": "link_res_type"
-                        },
-                        {
-                            "data_name": "link_res_id"
-                        },
-                        {
-                            "data_name": "link_res_name"
-                        },
-                        {
-                            "data_name": "background"
-                        },
-                        {
-                            "data_name": "theme"
-                        },
-                        {
-                            "data_name": "margin-right"
-                        },
-                        {
-                            "data_name": "margin-bottom"
-                        },
-                        {
-                            "data_name": "margin-left"
-                        }
-                    ]
-                },
-                "seq": "2"
+                "html": "<div class=\"mod mod-link {{theme}}\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};background:{{background}}\"> <h2><a href=\"{{link}}\">{{text}}<\/a><\/h2><\/div>"
             },
             {
                 "category": "1",
@@ -854,18 +738,7 @@
                     "background-image": {
                         "category": "style",
                         "require": false,
-                        "type": "string",
-                        "widget": {
-                            "opt": {
-                                "content": {
-                                    "name": "background-image"
-                                },
-                                "name": "chk_background-image"
-                            },
-                            "data_name": "background-image",
-                            "type": "switchrow",
-                            "label": "\u6dfb\u52a0\u80cc\u666f\u56fe"
-                        }
+                        "type": "string"
                     },
                     "background-size": {
                         "category": "style",
@@ -889,17 +762,6 @@
                     },
                     "margin-top": {
                         "category": "style",
-                        "widget": {
-                            "opt": {
-                                "content": {
-                                    "type": "margin"
-                                },
-                                "name": "chk_margin"
-                            },
-                            "data_name": "margin-top",
-                            "type": "switchrow",
-                            "label": "\u8c03\u6574\u8fb9\u8ddd"
-                        },
                         "required": false,
                         "type": "string"
                     },
@@ -917,84 +779,13 @@
                     "background-color": {
                         "category": "style",
                         "default": "#f2f2f2",
-                        "widget": {
-                            "opt": {
-                                "content": {
-                                    "name": "background-color"
-                                },
-                                "name": "chk_background-color"
-                            },
-                            "data_name": "background-color",
-                            "type": "switchrow",
-                            "label": "\u4fee\u6539\u80cc\u666f\u8272"
-                        },
                         "type": "string"
                     }
                 },
                 "title": "\u5e95\u677f",
                 "font_icon": "",
                 "html": "<div class=\"mod mod-layout_floor {{class}}\" data-role=\"sub-container\" data-container=\"sub-container\" style=\"background-size:{{background-size}};margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};background-color:{{background-color}};{{#background-image}}background-image:url({{background-image}});{{\/background-image}}{{#background-repeat}}background-repeat:{{background-repeat}}{{\/background-repeat}}\"><\/div>",
-                "eid": "114",
-                "version": "2.0.3",
-                "widgets": {
-                    "style": [
-                        {
-                            "opt": {
-                                "content": {
-                                    "name": "background-color"
-                                },
-                                "name": "chk_background-color"
-                            },
-                            "data_name": "background-color",
-                            "type": "switchrow",
-                            "label": "\u4fee\u6539\u80cc\u666f\u8272"
-                        },
-                        {
-                            "opt": {
-                                "content": {
-                                    "name": "background-image"
-                                },
-                                "name": "chk_background-image"
-                            },
-                            "data_name": "background-image",
-                            "type": "switchrow",
-                            "label": "\u6dfb\u52a0\u80cc\u666f\u56fe"
-                        },
-                        {
-                            "opt": {
-                                "content": {
-                                    "type": "margin"
-                                },
-                                "name": "chk_margin"
-                            },
-                            "data_name": "margin-top",
-                            "type": "switchrow",
-                            "label": "\u8c03\u6574\u8fb9\u8ddd"
-                        }
-                    ],
-                    "property": [
-                        {
-                            "data_name": "class"
-                        },
-                        {
-                            "data_name": "background-repeat"
-                        },
-                        {
-                            "data_name": "background-size"
-                        },
-                        {
-                            "data_name": "margin-right"
-                        },
-                        {
-                            "data_name": "margin-bottom"
-                        },
-                        {
-                            "data_name": "margin-left"
-                        }
-                    ]
-                },
-                "image_icon": "http:\/\/7bede40ef4e00.cdn.sohucs.com\/9641d0e6edf33f8fadcbbf1878d71a3e",
-                "seq": "28"
+                "image_icon": "http:\/\/7bede40ef4e00.cdn.sohucs.com\/9641d0e6edf33f8fadcbbf1878d71a3e"
             },
             {
                 "category": 0,
@@ -1036,28 +827,6 @@
                 "font_icon": "",
                 "html": "<script src=\"{{{src}}}\"></script>"
             }
-        ],
-        "price": 0,
-        "brief": "\u63d0\u4f9b\u4e86\u7cfb\u7edf\u9ed8\u8ba4\u7684\u4e00\u4e9b\u5c0f\u7ec4\u4ef6,\u5efa\u8bae\u5f00\u542f,\u65b9\u4fbf\u5efa\u7ad9.",
-        "_id": "53aebee97950ac4cf3db3819",
-        "states": [100],
-        "proxy-paths": {
-            "common": "*"
-        },
-        "code": "system_plugin",
-        "is_open": true,
-        "version": "2.0.3",
-        "proxy-prefixes": {
-            "manage-api": "",
-            "backend-api": "",
-            "backend-page": "",
-            "api": "",
-            "common": "",
-            "manage-page": "",
-            "page": ""
-        },
-        "vtime": 1405557242000,
-        "closable": false,
-        "icon": ""
+        ]
     }
 ]
