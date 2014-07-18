@@ -1,0 +1,149 @@
+[
+    {
+        "eid": "14",
+        "name": "layout2coloums",
+        "version": "1.0",
+        "deletable": true,
+        "value": {
+            "items": [
+                {
+                    "width": "50%",
+                    "content": ""
+                },
+                {
+                    "width": "50%",
+                    "content": ""
+                }
+            ],
+            "_containers_":{
+                "left_col":{
+                    "name":"left_col",
+                    "components":[
+
+                        {
+                            "eid": "14",
+                            "name": "layout2coloums",
+                            "version": "1.0",
+                            "deletable": true,
+                            "value": {
+                                "items": [
+                                    {
+                                        "width": "50%",
+                                        "content": ""
+                                    },
+                                    {
+                                        "width": "50%",
+                                        "content": ""
+                                    }
+                                ],
+                                "_containers_":{
+                                    "left_col":{
+                                        "name":"left_col",
+                                        "components":[
+                                            {
+                                                "ename": "system_plugin/text",
+                                                "deletable": true,
+                                                "value": {
+                                                    "richtext": "111",
+                                                    "align": "left",
+                                                    "margin-top": "",
+                                                    "margin-right": "",
+                                                    "margin-bottom": "",
+                                                    "margin-left": ""
+                                                }
+
+                                            }
+                                        ]
+                                    },
+                                    "right_col":{
+                                        "name":"right_col",
+                                        "components":[
+                                            {
+                                                "ename": "system_plugin/text",
+                                                "deletable": true,
+                                                "value": {
+                                                    "richtext": "222",
+                                                    "align": "left",
+                                                    "margin-top": "",
+                                                    "margin-right": "",
+                                                    "margin-bottom": "",
+                                                    "margin-left": ""
+                                                }
+
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "ename": "system_plugin/layout2coloums"
+                        }
+                    ]
+                },
+                "right_col":{
+                    "name":"right_col",
+                    "components":[
+                        {
+                            "eid": "14",
+                            "name": "layout2coloums",
+                            "version": "1.0",
+                            "deletable": true,
+                            "value": {
+                                "items": [
+                                    {
+                                        "width": "50%",
+                                        "content": ""
+                                    },
+                                    {
+                                        "width": "50%",
+                                        "content": ""
+                                    }
+                                ],
+                                "_containers_":{
+                                    "left_col":{
+                                        "name":"left_col",
+                                        "components":[
+                                            {
+                                                "ename": "system_plugin/text",
+                                                "deletable": true,
+                                                "value": {
+                                                    "richtext": "3333",
+                                                    "align": "left",
+                                                    "margin-top": "",
+                                                    "margin-right": "",
+                                                    "margin-bottom": "",
+                                                    "margin-left": ""
+                                                }
+
+                                            }
+                                        ]
+                                    },
+                                    "right_col":{
+                                        "name":"right_col",
+                                        "components":[
+                                            {
+                                                "ename": "system_plugin/text",
+                                                "deletable": true,
+                                                "value": {
+                                                    "richtext": "444",
+                                                    "align": "left",
+                                                    "margin-top": "",
+                                                    "margin-right": "",
+                                                    "margin-bottom": "",
+                                                    "margin-left": ""
+                                                }
+
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "ename": "system_plugin/layout2coloums"
+                        }
+                    ]
+                }
+            }
+        },
+        "ename": "system_plugin/layout2coloums"
+    }
+]
+

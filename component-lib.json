@@ -1,0 +1,1063 @@
+[
+    {
+        "title": "\u7cfb\u7edf\u63d2\u4ef6\u5305",
+        "components": [
+            {
+
+                "ename": "system_plugin\/text",
+                "name": "text",
+                "data_config": {
+                    "align": {
+                        "default": "left",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-bottom": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-top": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-right": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "richtext": {
+                        "default": "\u9ed8\u8ba4\u6587\u672c",
+                        "required": true,
+                        "type": "string"
+                    }
+                },
+                "title": "\u6587\u672c",
+                "font_icon": "&#xe809;",
+                "html": "<div class=\"mod mod-text {{class}}\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};background:{{background}}\">{{richtext}}<\/div>",
+                "image_icon": ""
+            },
+            {
+
+                "ename": "system_plugin\/pic",
+                "data_config": {
+                    "link_res_type": {
+                        "default": 0,
+                        "vd_rules": {
+                            "expect": {
+                                "values": [0, 1, 2, 3]
+                            }
+                        },
+                        "required": true,
+                        "type": "enum"
+                    },
+                    "link_res_id": {
+                        "default": 0,
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "int"
+                    },
+                    "image": {
+                        "default": "\/res\/skin\/images\/img\/pic-one.png",
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "string"
+                    },
+                    "margin-right": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-bottom": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "image_id": {
+                        "default": 0,
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "int"
+                    },
+                    "margin-top": {
+                        "category": "style",
+                        "widget": {
+                            "opt": {
+                                "content": {
+                                    "type": "margin"
+                                },
+                                "name": "chk_margin"
+                            },
+                            "data_name": "margin-top",
+                            "type": "switchrow",
+                            "label": "\u8c03\u6574\u8fb9\u8ddd"
+                        },
+                        "required": false,
+                        "type": "string"
+                    },
+                    "link": {
+                        "default": "javascript:;",
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "string"
+                    },
+                    "link_res_name": {
+                        "default": "",
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    }
+                },
+                "title": "\u56fe\u7247",
+                "font_icon": "&#xe03f;",
+                "html": "<div class=\"mod mod-pic mod-picone\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};\">{{#link}}<a href=\"{{link}}\">{{\/link}}<img src=\"{{image}}\" title=\"{{alt}}\" height=\"{{height}}\" data-imgid=\"{{image_id}}\" fit=\"{{fit}}\">{{#link}}<\/a>{{\/link}} <\/div>",
+                "image_icon": ""
+            },
+            {
+                "ename": "system_plugin\/share",
+                "font_icon": "&#xe02b;",
+                "title": "\u5206\u4eab",
+                "data_config": {
+                    "douban": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "qqweibo": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "renren": {
+                        "default": true,
+                        "type": "boolean"
+                    },
+                    "margin-right": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "sohu": {
+                        "default": true,
+                        "type": "boolean"
+                    },
+                    "margin-top": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "qzone": {
+                        "default": true,
+                        "type": "boolean"
+                    },
+                    "margin-left": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-bottom": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "sina": {
+                        "default": true,
+                        "type": "boolean"
+                    }
+                },
+                "html": "<div class=\"mod mod-share\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};\">    <span class=\"hd\">\u5206\u4eab<\/span>    {{#qzone}}<a href=\"{{qzone_url}}\" class=\"qzone\" title=\"\u5206\u4eab\u5230QQ\u7a7a\u95f4\"><\/a>{{\/qzone}}    {{#sina}}<a href=\"{{sina_url}}\" class=\"sina\" title=\"\u5206\u4eab\u5230\u65b0\u6d6a\u5fae\u535a\"><\/a>{{\/sina}}    {{#renren}}<a href=\"{{renren_url}}\" class=\"renren\" title=\"\u5206\u4eab\u5230\u4eba\u4eba\"><\/a>{{\/renren}}    {{#sohu}}<a href=\"{{sohu_url}}\" class=\"sohu\" title=\"\u5206\u4eab\u5230\u641c\u72d0\u5fae\u535a\"><\/a>{{\/sohu}}<\/div>"
+            },
+            {
+
+                "ename": "system_plugin\/focus",
+
+
+                "title": "\u7ec4\u56fe",
+                "font_icon": "&#xe04d;",
+                "data_config": {
+                    "items": {
+                        "default": [
+                            {
+                                "link_res_type": 0,
+                                "link_res_id": 0,
+                                "text": "\u5728\u9009\u9879\u4e2d\u53ef\u4ee5\u6dfb\u52a0\u56fe\u7247\u63cf\u8ff0",
+                                "image": "\/res\/skin\/images\/img\/default-focus.png",
+                                "image_id": 0,
+                                "link": "javascript:;",
+                                "link_res_name": "",
+                                "show_text": true
+                            }
+                        ],
+                        "vd_rules": {
+                            "array": {
+                                "object": {
+                                    "link_res_type": {
+                                        "default": 0,
+                                        "vd_rules": {
+                                            "expect": {
+                                                "values": [0, 1, 2, 3]
+                                            }
+                                        },
+                                        "required": true,
+                                        "type": "enum"
+                                    },
+                                    "link_res_id": {
+                                        "default": 0,
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "int"
+                                    },
+                                    "image": {
+                                        "default": "\/res\/skin\/images\/img\/default-pg.png",
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "string"
+                                    },
+                                    "image_id": {
+                                        "default": 0,
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "int"
+                                    },
+                                    "link": {
+                                        "default": "javascript:;",
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "string"
+                                    },
+                                    "link_res_name": {
+                                        "default": "",
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "required": true,
+                        "type": "array"
+                    },
+                    "margin-left": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-bottom": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-top": {
+                        "widget": {
+                            "opt": {
+                                "content": {
+                                    "type": "margin"
+                                },
+                                "name": "chk_margin"
+                            },
+                            "data_name": "margin-top",
+                            "type": "switchrow",
+                            "label": "\u8c03\u6574\u8fb9\u8ddd"
+                        },
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-right": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "height_percent": {
+                        "default": "75%",
+                        "required": false,
+                        "type": "string"
+                    }
+                },
+                "html": "<div class=\"mod mod-focus\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};\" {{#eid}}data-eid=\"{{eid}}\"{{\/eid}}> <div class=\"focus-w\"><div id='slider' class='swipe'><div class='swipe-wrap' style=\"padding-bottom:{{height_percent}}\">{{#items}} <div><a href=\"{{link}}\"><img src=\"{{image}}\" alt=\"\" data-imgid=\"{{image_id}}\" fit=\"{{fit}}\">{{#show_text}}<p {{#unshow}}style=\"display:none;\"{{\/unshow}}>{{text}}<\/p>{{\/show_text}}<\/a><\/div>{{\/items}}{{^items}}<div><a><img src=\"{{_staticurl_}}\/res\/skin\/images\/img\/default-focus.png\"><\/a><\/div>{{\/items}} <\/div> <\/div> <div class=\"focus-ctr\">{{#items}} <span {{#cur}}class=\"cur\"{{\/cur}} ><\/span>{{\/items}} <\/div> <\/div> <\/div>",
+                "eid": "20",
+                "image_icon": ""
+            },
+            {
+                "ename": "system_plugin\/layout2coloums",
+
+                "data_config": {
+                    "margin-right": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-top": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-bottom": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "required": false,
+                        "type": "string"
+                    }
+                },
+                "title": "\u53cc\u680f",
+                "font_icon": "&#xe00f;",
+                "html": "<div class=\"mod mod-layout2coloums mod-column mod-2column\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};\"><div class=\"devide-con\"><div class=\"cell\" style=\"width:{{items.0.width}};\" data-container=\"left_col\"><\/div><div class=\"cell\" style=\"width:{{items.1.width}};\" data-container=\"right_col\"><\/div> <\/div><\/div>",
+                "image_icon": ""
+            },
+            {
+                "ename": "system_plugin\/qrcode",
+                "font_icon": "&#xe002;",
+                "title": "\u4e8c\u7ef4\u7801",
+                "data_config": {
+                    "data": {
+                        "default": "http:\/\/www.kuaizhan.com",
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "string"
+                    },
+                    "data_type": {
+                        "default": 2,
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "int"
+                    }
+                },
+                "html": "<div class=\"mod mod-qrcode\"><img src=\"{{qrcode}}\" ><\/div>"
+            },
+            {
+                "ename": "system_plugin\/video",
+                "data_config": {
+                    "video_url": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "title": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "url": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "image": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "video_id": {
+                        "default": 0,
+                        "required": false,
+                        "type": "string"
+                    },
+                    "video_type": {
+                        "default": "",
+                        "required": false,
+                        "type": "enum"
+                    }
+                },
+                "title": "\u89c6\u9891",
+                "font_icon": "&#xe025;",
+                "html": "<div class='mod mod-video' {{_progdata_}} data-url='{{video_url}}' data-type='{{video_type}}'><div class='video-play-icon'>{{#image}}<img src='{{image}}' class='pic'>{{\/image}}<div class='play-icon'><img src='http:\/\/s0.kuaizhan.com\/res\/skin\/images\/video-play.png'><\/div><\/div><\/div>",
+                "image_icon": "",
+                "seq": "5"
+            },
+            {
+
+                "ename": "system_plugin\/mobile_button",
+                "data_config": {
+                    "theme_color": {
+                        "default": true,
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "boolean"
+                    },
+                    "tel": {
+                        "default": "",
+                        "widget": {
+                            "opt": {
+                                "placeholder": "\u8bf7\u8f93\u5165\u7535\u8bdd\u53f7\u7801"
+                            },
+                            "data_name": "tel",
+                            "type": "text",
+                            "label": "\u7535\u8bdd\u53f7\u7801"
+                        },
+                        "required": true,
+                        "type": "string",
+                        "vd_rules": {
+                            "mphone": []
+                        }
+                    },
+                    "text": {
+                        "default": "\u8054\u7cfb\u7535\u8bdd",
+                        "widget": {
+                            "opt": {
+                                "placeholder": "\u8bf7\u8f93\u5165\u6309\u94ae\u6587\u5b57"
+                            },
+                            "data_name": "text",
+                            "type": "text",
+                            "label": "\u6309\u94ae\u6807\u9898"
+                        },
+                        "required": true,
+                        "type": "string",
+                        "vd_rules": {
+                            "chLength": {
+                                "max": 20,
+                                "min": 1
+                            }
+                        }
+                    },
+                    "align": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-right": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "height": {
+                        "category": "style",
+                        "vd_rules": {
+                            "match": "\/^\\d{1,3}px$\/"
+                        },
+                        "required": false,
+                        "type": "string"
+                    },
+                    "width": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string",
+                        "vd_rules": {
+                            "match": "\/^\\d{2,3}%$\/"
+                        }
+                    },
+                    "margin-top": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-bottom": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "type": {
+                        "default": "highlight",
+                        "vd_rules": {
+                            "expect": {
+                                "values": ["highlight", "flat", "gradient"]
+                            }
+                        },
+                        "required": true,
+                        "type": "enum"
+                    }
+                },
+                "title": "\u7535\u8bdd",
+                "font_icon": "&#xe014;",
+                "html": "<div class='mod mod-button' style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}}; text-align:{{align}}' {{#eid}}data-eid='{{eid}}'{{\/eid}}><a href='tel:{{tel}}' class='btn-{{type}} {{#theme_color}}btn-{{type}}-theme{{\/theme_color}}' style='{{#width}}width:{{width}};{{\/width}} {{#height}}height:{{height}};{{\/height}}{{#height}}line-height:{{height}};{{\/height}}'><i class='font-ico'>\ue014<\/i><span>{{text}}<\/span><\/a><\/div>",
+                "image_icon": ""
+            },
+            {
+
+                "ename": "system_plugin\/picgroup",
+                "data_config": {
+                    "items": {
+                        "default": [
+                            {
+                                "link_res_type": 0,
+                                "link_res_id": 0,
+                                "image": "\/res\/skin\/images\/img\/default-pg.png",
+                                "image_id": 0,
+                                "link": "javascript:;",
+                                "link_res_name": "",
+                                "show_link": false,
+                                "show_text": false
+                            }
+                        ],
+                        "vd_rules": {
+                            "array": {
+                                "object": {
+                                    "link_res_type": {
+                                        "default": 0,
+                                        "vd_rules": {
+                                            "expect": {
+                                                "values": [0, 1, 2, 3]
+                                            }
+                                        },
+                                        "required": true,
+                                        "type": "enum"
+                                    },
+                                    "link_res_id": {
+                                        "default": 0,
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "int"
+                                    },
+                                    "image": {
+                                        "default": "\/res\/skin\/images\/img\/default-pg.png",
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "string"
+                                    },
+                                    "image_id": {
+                                        "default": 0,
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "int"
+                                    },
+                                    "link": {
+                                        "default": "javascript:;",
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "string"
+                                    },
+                                    "link_res_name": {
+                                        "default": "",
+                                        "vd_rules": [],
+                                        "required": true,
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "required": true,
+                        "type": "array"
+                    },
+                    "margin-right": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "cols": {
+                        "default": 2,
+                        "required": true,
+                        "type": "int",
+                        "vd_rules": []
+                    },
+                    "margin-bottom": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-top": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "required": false,
+                        "type": "string"
+                    }
+                },
+                "title": "\u56fe\u96c6",
+                "font_icon": "&#xe039;",
+                "html": "<div class='mod mod-picgroup' style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><ul class='pic-gp{{cols}}'>{{#items}}<li {{#show_link}}class='st-link'{{\/show_link}}><a {{#show_link}}href='{{link}}'{{\/show_link}}{{^show_link}}href='javascript:;'{{\/show_link}}><img src='{{image}}' alt='{{alt}}' data-imgid='{{image_id}}' fit='{{fit}}'>{{#show_text}}<p {{#unshow}}style='display:none;'{{\/unshow}}>{{text}}<\/p>{{\/show_text}}<\/a><\/li>{{\/items}}{{^items}}<img src='{{_staticurl_}}\/res\/skin\/images\/img\/default-pg.png'>{{\/items}}<\/ul><\/div>",
+                "image_icon": "",
+                "seq": "4"
+            },
+            {
+                "category": 0,
+                "ename": "system_plugin\/tpl-placeholder",
+                "data_config": {
+                    "content": {
+                        "default": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "data": {
+                        "default": "",
+                        "required": false,
+                        "type": "object"
+                    },
+                    "class": {
+                        "default": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "height": {
+                        "default": "50px",
+                        "required": false,
+                        "type": "string"
+                    }
+                },
+                "title": "\u6a21\u677f\u5360\u4f4d\u7b26",
+                "font_icon": "",
+                "html": "{{content}}",
+                "image_icon": ""
+            },
+            {
+                "ename": "system_plugin\/title",
+                "data_config": {
+                    "link_res_type": {
+                        "default": 3,
+                        "required": true,
+                        "type": "enum"
+                    },
+                    "link_res_id": {
+                        "default": "",
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "string"
+                    },
+                    "title": {
+                        "vd_msg": {
+                            "length_too_short": "\u4e0d\u80fd\u4e3a\u7a7a",
+                            "*": "\u6807\u9898\u4e0d\u5408\u6cd5",
+                            "length_too_long": "\u6807\u9898\u4e0d\u80fd\u8d85\u8fc720\u4e2a\u5b57"
+                        },
+                        "default": "\u6807\u9898\u6587\u5b57",
+                        "required": true,
+                        "vd_rules": {
+                            "length": {
+                                "max": 20,
+                                "min": 1
+                            }
+                        },
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "t4": {
+                        "default": false,
+                        "required": true,
+                        "type": "boolean"
+                    },
+                    "margin-right": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "t2": {
+                        "default": false,
+                        "required": true,
+                        "type": "boolean"
+                    },
+                    "t3": {
+                        "default": false,
+                        "required": true,
+                        "type": "boolean"
+                    },
+                    "t0": {
+                        "default": false,
+                        "required": true,
+                        "type": "boolean"
+                    },
+                    "t1": {
+                        "default": true,
+                        "required": true,
+                        "type": "boolean"
+                    },
+                    "margin-top": {
+                        "required": false,
+                        "type": "string"
+                    },
+                    "link": {
+                        "default": "",
+                        "vd_rules": [],
+                        "required": false,
+                        "type": "string"
+                    },
+                    "link_res_name": {
+                        "default": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "show_link": {
+                        "default": false,
+                        "vd_rules": [],
+                        "required": true,
+                        "type": "boolean"
+                    },
+                    "margin-bottom": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    }
+                },
+                "title": "\u6807\u9898",
+                "font_icon": "&#xe06e;",
+                "html": "{{#t0}}{{#show_link}}<a href='{{link}}'>{{\/show_link}}<div class='mod-title t0 {{class}}' style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><h2>{{title}}<\/h2><i class='font-ico'><\/i><\/div>{{#show_link}}<\/a>{{\/show_link}}{{\/t0}}{{#t1}}{{#show_link}}<a href='{{link}}'>{{\/show_link}}<div class='mod-title t1 {{class}}' style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><h2>{{title}}<\/h2><i class='font-ico'><\/i><\/div>{{#show_link}}<\/a>{{\/show_link}}{{\/t1}}{{#t2}}{{#show_link}}<a href='{{link}}'>{{\/show_link}}<div class='mod-title t2 {{class}}' style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><h2>{{title}}<\/h2><i class='font-ico'><\/i><\/div>{{#show_link}}<\/a>{{\/show_link}}{{\/t2}}{{#t3}}{{#show_link}}<a href='{{link}}'>{{\/show_link}}<div class='mod-title t3 {{class}}' style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><h2>{{title}}<\/h2><i class='font-ico'>\u25cf<\/i><\/div>{{#show_link}}<\/a>{{\/show_link}}{{\/t3}}{{#t4}}{{#show_link}}<a href='{{link}}'>{{\/show_link}}<div class='mod-title t4 {{class}}' style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><h2>{{title}}<\/h2><i class='font-ico'><\/i><\/div>{{#show_link}}<\/a>{{\/show_link}}{{\/t4}}",
+                "image_icon": ""
+            },
+            {
+                "category": "2",
+                "ename": "system_plugin\/link",
+                "name": "link",
+                "data_config": {
+                    "link_res_type": {
+                        "default": 3,
+                        "required": false,
+                        "type": "enum"
+                    },
+                    "link_res_name": {
+                        "default": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "link_res_id": {
+                        "default": "",
+                        "vd_rules": [],
+                        "required": false,
+                        "type": "string"
+                    },
+                    "text": {
+                        "widget": {
+                            "opt": {
+                                "theme": "simple",
+                                "class": "mod-link"
+                            },
+                            "data_name": "text",
+                            "type": "richtext",
+                            "label": "\u94fe\u63a5\u6587\u5b57"
+                        },
+                        "vd_msg": {
+                            "*": "",
+                            "chlength_too_long": "\u94fe\u63a5\u6587\u5b57\u4e0d\u80fd\u8d85\u8fc7100\u4e2a\u5b57",
+                            "chlength_too_short": "\u4e0d\u80fd\u4e3a\u7a7a"
+                        },
+                        "default": "\u94fe\u63a5\u6587\u5b57",
+                        "required": true,
+                        "vd_rules": {
+                            "chLength": {
+                                "stripHtml": true,
+                                "max": 200,
+                                "min": 1
+                            }
+                        },
+                        "type": "string"
+                    },
+                    "margin-right": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "theme": {
+                        "default": "t0",
+                        "vd_rules": {
+                            "expect": {
+                                "values": ["t0", "t1", "t2", "t3"]
+                            }
+                        },
+                        "required": false,
+                        "type": "enum"
+                    },
+                    "margin-bottom": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-top": {
+                        "category": "style",
+                        "widget": {
+                            "opt": {
+                                "content": {
+                                    "type": "margin"
+                                },
+                                "name": "chk_margin"
+                            },
+                            "data_name": "margin-top",
+                            "type": "switchrow",
+                            "label": "\u8c03\u6574\u8fb9\u8ddd"
+                        },
+                        "required": false,
+                        "type": "string"
+                    },
+                    "link": {
+                        "default": "",
+                        "vd_rules": [],
+                        "required": false,
+                        "type": "string"
+                    },
+                    "background": {
+                        "default": "transparent",
+                        "vd_rules": [],
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    }
+                },
+                "title": "\u94fe\u63a5",
+                "font_icon": "&#xe02c;",
+                "html": "<div class=\"mod mod-link {{theme}}\" style=\"margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};background:{{background}}\"> <h2><a href=\"{{link}}\">{{text}}<\/a><\/h2><\/div>",
+                "eid": "8",
+                "version": "2.0.3",
+                "widgets": {
+                    "style": [
+                        {
+                            "opt": {
+                                "content": {
+                                    "type": "margin"
+                                },
+                                "name": "chk_margin"
+                            },
+                            "data_name": "margin-top",
+                            "type": "switchrow",
+                            "label": "\u8c03\u6574\u8fb9\u8ddd"
+                        }
+                    ],
+                    "property": [
+                        {
+                            "opt": {
+                                "theme": "simple",
+                                "class": "mod-link"
+                            },
+                            "data_name": "text",
+                            "type": "richtext",
+                            "label": "\u94fe\u63a5\u6587\u5b57"
+                        },
+                        {
+                            "data_name": "link"
+                        },
+                        {
+                            "data_name": "link_res_type"
+                        },
+                        {
+                            "data_name": "link_res_id"
+                        },
+                        {
+                            "data_name": "link_res_name"
+                        },
+                        {
+                            "data_name": "background"
+                        },
+                        {
+                            "data_name": "theme"
+                        },
+                        {
+                            "data_name": "margin-right"
+                        },
+                        {
+                            "data_name": "margin-bottom"
+                        },
+                        {
+                            "data_name": "margin-left"
+                        }
+                    ]
+                },
+                "seq": "2"
+            },
+            {
+                "category": "1",
+                "ename": "system_plugin\/layout_floor",
+                "name": "layout_floor",
+                "data_config": {
+                    "background-image": {
+                        "category": "style",
+                        "require": false,
+                        "type": "string",
+                        "widget": {
+                            "opt": {
+                                "content": {
+                                    "name": "background-image"
+                                },
+                                "name": "chk_background-image"
+                            },
+                            "data_name": "background-image",
+                            "type": "switchrow",
+                            "label": "\u6dfb\u52a0\u80cc\u666f\u56fe"
+                        }
+                    },
+                    "background-size": {
+                        "category": "style",
+                        "require": false,
+                        "type": "string"
+                    },
+                    "background-repeat": {
+                        "category": "style",
+                        "require": false,
+                        "type": "string"
+                    },
+                    "margin-right": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-bottom": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-top": {
+                        "category": "style",
+                        "widget": {
+                            "opt": {
+                                "content": {
+                                    "type": "margin"
+                                },
+                                "name": "chk_margin"
+                            },
+                            "data_name": "margin-top",
+                            "type": "switchrow",
+                            "label": "\u8c03\u6574\u8fb9\u8ddd"
+                        },
+                        "required": false,
+                        "type": "string"
+                    },
+                    "margin-left": {
+                        "category": "style",
+                        "required": false,
+                        "type": "string"
+                    },
+                    "class": {
+                        "category": "property",
+                        "default": "",
+                        "require": false,
+                        "type": "string"
+                    },
+                    "background-color": {
+                        "category": "style",
+                        "default": "#f2f2f2",
+                        "widget": {
+                            "opt": {
+                                "content": {
+                                    "name": "background-color"
+                                },
+                                "name": "chk_background-color"
+                            },
+                            "data_name": "background-color",
+                            "type": "switchrow",
+                            "label": "\u4fee\u6539\u80cc\u666f\u8272"
+                        },
+                        "type": "string"
+                    }
+                },
+                "title": "\u5e95\u677f",
+                "font_icon": "",
+                "html": "<div class=\"mod mod-layout_floor {{class}}\" data-role=\"sub-container\" data-container=\"sub-container\" style=\"background-size:{{background-size}};margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};background-color:{{background-color}};{{#background-image}}background-image:url({{background-image}});{{\/background-image}}{{#background-repeat}}background-repeat:{{background-repeat}}{{\/background-repeat}}\"><\/div>",
+                "eid": "114",
+                "version": "2.0.3",
+                "widgets": {
+                    "style": [
+                        {
+                            "opt": {
+                                "content": {
+                                    "name": "background-color"
+                                },
+                                "name": "chk_background-color"
+                            },
+                            "data_name": "background-color",
+                            "type": "switchrow",
+                            "label": "\u4fee\u6539\u80cc\u666f\u8272"
+                        },
+                        {
+                            "opt": {
+                                "content": {
+                                    "name": "background-image"
+                                },
+                                "name": "chk_background-image"
+                            },
+                            "data_name": "background-image",
+                            "type": "switchrow",
+                            "label": "\u6dfb\u52a0\u80cc\u666f\u56fe"
+                        },
+                        {
+                            "opt": {
+                                "content": {
+                                    "type": "margin"
+                                },
+                                "name": "chk_margin"
+                            },
+                            "data_name": "margin-top",
+                            "type": "switchrow",
+                            "label": "\u8c03\u6574\u8fb9\u8ddd"
+                        }
+                    ],
+                    "property": [
+                        {
+                            "data_name": "class"
+                        },
+                        {
+                            "data_name": "background-repeat"
+                        },
+                        {
+                            "data_name": "background-size"
+                        },
+                        {
+                            "data_name": "margin-right"
+                        },
+                        {
+                            "data_name": "margin-bottom"
+                        },
+                        {
+                            "data_name": "margin-left"
+                        }
+                    ]
+                },
+                "image_icon": "http:\/\/7bede40ef4e00.cdn.sohucs.com\/9641d0e6edf33f8fadcbbf1878d71a3e",
+                "seq": "28"
+            },
+            {
+                "category": 0,
+                "ename": "system_plugin\/head-title",
+                "data_config": {
+                    "title": {
+                        "category": "property",
+                        "type": "string"
+                    }
+                },
+                "title": "\u5bfc\u822a4",
+                "font_icon": "",
+                "html": "<title>{{title}}</title>",
+                "seq": "27"
+            },
+            {
+                "category": 0,
+                "ename": "system_plugin\/link-style",
+                "data_config": {
+                    "href": {
+                        "category": "property",
+                        "type": "string"
+                    }
+                },
+                "title": "\u5bfc\u822a4",
+                "font_icon": "",
+                "html": "<link rel=\"stylesheet\" type=\"text/css\" href=\"{{{href}}}\">"
+            },
+            {
+                "category": 0,
+                "ename": "system_plugin\/link-script",
+                "data_config": {
+                    "src": {
+                        "category": "property",
+                        "type": "string"
+                    }
+                },
+                "title": "\u5bfc\u822a4",
+                "font_icon": "",
+                "html": "<script src=\"{{{src}}}\"></script>"
+            }
+        ],
+        "price": 0,
+        "brief": "\u63d0\u4f9b\u4e86\u7cfb\u7edf\u9ed8\u8ba4\u7684\u4e00\u4e9b\u5c0f\u7ec4\u4ef6,\u5efa\u8bae\u5f00\u542f,\u65b9\u4fbf\u5efa\u7ad9.",
+        "_id": "53aebee97950ac4cf3db3819",
+        "states": [100],
+        "proxy-paths": {
+            "common": "*"
+        },
+        "code": "system_plugin",
+        "is_open": true,
+        "version": "2.0.3",
+        "proxy-prefixes": {
+            "manage-api": "",
+            "backend-api": "",
+            "backend-page": "",
+            "api": "",
+            "common": "",
+            "manage-page": "",
+            "page": ""
+        },
+        "vtime": 1405557242000,
+        "closable": false,
+        "icon": ""
+    }
+]

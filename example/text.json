@@ -1,0 +1,17 @@
+[
+    {
+        "eid": "16",
+        "name": "text",
+        "version": "1.0",
+        "deletable": true,
+        "value": {
+            "richtext": "文本组件测试",
+            "align": "left",
+            "margin-top": "10px",
+            "margin-right": "10px",
+            "margin-bottom": "10px",
+            "margin-left": "10px"
+        },
+        "ename": "system_plugin/text"
+    }
+]

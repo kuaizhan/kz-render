@@ -1,0 +1,18 @@
+[
+    {
+
+        "deletable": true,
+        "value": {
+            "title": "测试站点-标题-partial"
+        },
+        "ename": "system_plugin/head-title"
+    },
+    {
+
+        "deletable": true,
+        "value": {
+            "href": "http://s0.kuaizhan.com/res/ui/css/base.css?v=2.5"
+        },
+        "ename": "system_plugin/link-style"
+    }
+]
