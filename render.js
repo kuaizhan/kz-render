@@ -9,7 +9,7 @@
 
 var mustache = require("mustache");
 var $ = require("node-jquery");
-
+var renderFn =require("./render_ext_fn");
 var comp_lib_file = './component-lib.json';
 
 /*全部组件配置数据*/
@@ -46,8 +46,9 @@ var _getClosestContainer = function ($dom, containerName) {
 
 /*渲染一个组件*/
 var renderItem = function (template, data) {
+    var render_data = $.extend(true,data,renderFn.renderExtFn);
 
-    var html = mustache.render(template, data);
+    var html = mustache.render(template, render_data);
 
     if (data["_containers_"]) {
         var $dom = $(html);

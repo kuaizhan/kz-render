@@ -95,6 +95,18 @@
                     }
                 },
                 "html": "<script src=\"{{{src}}}\"></script>"
+            },
+            {
+                "ename": "system_plugin\/test-link",
+                "data_config": {
+                    "link_res_src": {
+                        "type": "string"
+                    },
+                    "link_res_id":{
+                        "type":"string"
+                    }
+                },
+                "html": "{{_sys_fn_link}}"
             }
         ]
     }

@@ -14,7 +14,7 @@ var testPage =function(file){
     console.log(render.renderPage(test_data));
     console.log("----------------------------------------")
 }
-
+test('./sys_fn_test.json');
 test('./text.json');
 test('./floor+text.json');
 test('./2coloums+text.json');
