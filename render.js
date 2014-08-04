@@ -9,13 +9,16 @@
 
 var mustache = require("mustache");
 var $ = require("node-jquery");
+//扩展render 的function
 var renderFn =require("./render_ext_fn");
-var comp_lib_file = './component-lib.json';
+
+//基本渲染规则
+var comp_render_role = './render-role.json';
 
 /*全部组件配置数据*/
 var comps = (function () {
 
-    var _lib = require(comp_lib_file);
+    var _lib = require(comp_render_role);
     var _comps = {};
     _lib.forEach(function (p) {
         p.components.forEach(function (c) {
