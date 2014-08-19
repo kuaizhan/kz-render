@@ -1,0 +1,4 @@
+{
+    "ename": "_internal/page",
+    "html": "<!DOCTYPE html><html><head>{{#_sys_fn_container}}head{{/_sys_fn_container}}</head><body>{{#_sys_fn_container}}body{{/_sys_fn_container}}</body>{{#_sys_fn_container}}bottom{{/_sys_fn_container}}</html>"
+}

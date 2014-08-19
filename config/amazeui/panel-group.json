@@ -1,0 +1,4 @@
+{
+    "ename": "amazeui/panel-group",
+    "html": "<div class=\"am-panel-group\">{{#_sys_fn_container}}sub-container{{/_sys_fn_container}}<\/div>"
+}

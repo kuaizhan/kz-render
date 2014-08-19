@@ -1,0 +1,4 @@
+{
+    "ename": "amazeui/blog-layout",
+    "html": "<div class=\"am-g am-g-fixed blog-g-fixed\"><div class=\"col-md-8\">{{#_sys_fn_container}}left-container{{/_sys_fn_container}}<\/div><div class=\"col-md-4 blog-sidebar\">{{#_sys_fn_container}}right-container{{/_sys_fn_container}}</div></div>"
+}

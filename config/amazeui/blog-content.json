@@ -1,0 +1,4 @@
+{
+    "ename":"amazeui/blog-content",
+    "html":"<article class=\"blog-main\">      <h3 class=\"am-article-title blog-title\">        <a href=\"#\">{{main-title}}</a>      </h3>      <h4 class=\"am-article-meta blog-meta\">by <a href=\"\">{{author}}</a> posted on {{date}} under <a href=\"#\">{{tag}}</a></h4>      <div class=\"am-g blog-content\"> {{{content}}}</div>  </article>"
+}

@@ -1,0 +1,9 @@
+{
+    "ename": "_internal/head-title",
+    "data_config": {
+        "title": {
+            "type": "string"
+        }
+    },
+    "html": "<title>{{title}}</title>"
+}

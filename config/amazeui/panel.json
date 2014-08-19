@@ -1,0 +1,4 @@
+{
+    "ename": "amazeui/panel",
+    "html": "<section class=\"am-panel am-panel-default\"><div class=\"am-panel-hd\">{{title}}</div>{{^isList}}<div class=\"am-panel-bd\">{{/isList}}{{#_sys_fn_container}}sub-container{{/_sys_fn_container}}{{^isList}}<\/div>{{/isList}}</section>"
+}

@@ -1,9 +1,13 @@
 {
     "name": "kz-render",
+    "author":"chris",
     "description": "快站页面构建器",
     "version": "0.1.0",
     "dependencies": {
         "mustache": "0.8.2",
-        "node-jquery": "0.1.0"
-    }
+        "node-jquery": "0.1.0",
+        "express": "3.4.0",
+        "jade": "*"
+    },
+    "scripts":{"start":"node server.js"}
 }

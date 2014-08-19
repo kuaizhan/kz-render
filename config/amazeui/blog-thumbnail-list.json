@@ -1,0 +1,4 @@
+{
+    "ename":"amazeui/blog-thumbnail-list",
+    "html":"<ul class=\"sm-block-grid-{{count-per-row}} blog-team\">{{#list}}<li><img class=\"am-thumbnail\" src=\"{{image}}\" /></li>{{/list}}</ul>"
+}

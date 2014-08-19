@@ -1,0 +1,9 @@
+{
+    "ename": "_internal/link-style",
+    "data_config": {
+        "href": {
+            "type": "string"
+        }
+    },
+    "html": "<link rel=\"stylesheet\" type=\"text/css\" href=\"{{{href}}}\">"
+}

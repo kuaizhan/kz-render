@@ -1,0 +1,9 @@
+{
+    "ename": "_internal/link-script",
+    "data_config": {
+        "src": {
+            "type": "string"
+        }
+    },
+    "html": "<script src=\"{{{src}}}\"></script>"
+}

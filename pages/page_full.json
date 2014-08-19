@@ -1,0 +1,187 @@
+[
+    {
+    "ename": "_internal/page",
+        "value": {
+            "_containers_":{
+                "head":{
+                    "name":"head",
+                    "components":[
+                        {
+                            "value": {
+                                "title": "测试站点-标题"
+                            },
+                            "ename": "_internal/head-title"
+
+                        },
+                        {
+                            "type":"refer",
+                            "value":{
+                                "path": "./pages/page_ref_partial-head.json"
+                            },
+                            "ename": "_internal/ref"
+                        },
+                        {
+                            "type":"refer",
+                            "value":{
+                                "path": "./pages/amazeui-blog-style.json"
+                            },
+                            "ename": "_internal/ref"
+                        }
+                    ]
+                },
+                "body":{
+                    "name":"body",
+                    "components":[
+                        {
+                            "ename":"amazeui/blog-topbar",
+                            "value":{}
+                        },
+                        {
+                            "ename":"amazeui/blog-layout",
+                            "value":{
+                                "_containers_":{
+                                    "left-container":{
+                                        "name":"left-container",
+                                        "components":[
+                                            {
+                                                "ename": "amazeui/blog-content",
+                                                "value": {
+                                                    "content": "<p>看著自己的作品，你的喜悅之情溢於言表，差點就要說出我要感謝我的父母之類的得獎感言。但在你對面的客戶先是一點表情也沒有，又瞬間轉為陰沉，抿了抿嘴角冷冷的說……</p>",
+                                                    "author":"chris",
+                                                    "date":"2014/8/19",
+                                                    "main-title":"Google fonts 的字體（display 篇）",
+                                                    "tag":"字体"
+                                                }
+
+                                            }
+                                        ]
+                                    } ,
+                                    "right-container":{
+                                        "name":"right-container",
+                                        "components":[
+                                            {
+                                                "ename": "amazeui/panel-group",
+                                                "value": {
+                                                    "_containers_":{
+                                                        "sub-container":{
+                                                            "name":"sub-container",
+                                                            "components":[
+                                                                {
+                                                                    "ename":"amazeui/panel",
+                                                                    "value":{
+                                                                        "title":"关于我",
+                                                                        "_containers_":{
+                                                                            "sub-container":{
+                                                                                "name":"sub-container",
+                                                                                "components":[
+                                                                                    {
+                                                                                        "ename":"system_plugin/text",
+                                                                                        "value":{
+                                                                                            "richtext":"前所未有的中文云端字型服务，让您在 web 平台上自由使用高品质中文字体，跨平台、可搜寻，而且超美。云端字型是我们的事业，推广字型学知识是我们的志业。从字体出发，关心设计与我们的生活，justfont blog 正是為此而生。"
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "ename":"amazeui/button",
+                                                                                        "value":{
+                                                                                            "classes":[
+                                                                                                {"class":"success"},
+                                                                                                {"class":"sm"}
+                                                                                            ],
+                                                                                            "text":"更多 →"
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "ename":"amazeui/panel",
+                                                                    "value":{
+                                                                        "title":"文章目录",
+                                                                        "isList":true,
+                                                                        "_containers_":{
+                                                                            "sub-container":{
+                                                                                "name":"sub-container",
+                                                                                "components":[
+                                                                                    {
+                                                                                        "ename":"amazeui/blog-list",
+                                                                                        "value":{
+                                                                                            "list":[
+                                                                                                {"text":"Google fonts 的字體（sans-serif 篇）","link":"#"},
+                                                                                                {"text":"[but]服貿最前線？－再訪桃園機場","link":"#"},
+                                                                                                {"text":"到日星鑄字行學字型","link":"#"},
+                                                                                                {"text":"glyph font vs. 漢字（上）","link":"#"},
+                                                                                                {"text":"浙江民間書刻體上線","link":"#"},
+                                                                                                {"text":"[極短篇] Android v.s iOS，誰的字體好讀？","link":"#"}
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "ename":"amazeui/panel",
+                                                                    "value":{
+                                                                        "title":"团队成员",
+                                                                        "isList":false,
+                                                                        "_containers_":{
+                                                                            "sub-container":{
+                                                                                "name":"sub-container",
+                                                                                "components":[
+                                                                                    {
+                                                                                        "ename":"amazeui/blog-thumbnail-list",
+                                                                                        "value":{
+                                                                                            "count-per-row":4,
+                                                                                            "list":[
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"},
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"},
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"},
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"},
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"},
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"},
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"},
+                                                                                                {"image":"http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg"}
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "bottom":{
+                    "name":"bottom",
+                    "components":[
+
+                        {
+                            "type":"refer",
+                            "value":{
+                                "path": "./pages/page_ref_partial-bottom.json"
+                            },
+                            "ename": "_internal/ref"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]
+

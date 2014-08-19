@@ -1,0 +1,4 @@
+{
+    "ename":"amazeui/blog-list",
+    "html":"<ul class=\"am-list\">{{#list}}<li><a href=\"{{link}}\">{{text}}</a></li>{{/list}}</ul>"
+}

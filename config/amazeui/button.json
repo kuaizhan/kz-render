@@ -1,0 +1,4 @@
+{
+    "ename":"amazeui/button",
+    "html":"<a class=\"am-btn {{#classes}}am-btn-{{class}} {{/classes}}\" href=\"#\">{{text}}</a>"
+}

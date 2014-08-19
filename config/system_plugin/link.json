@@ -1,0 +1,12 @@
+{
+    "ename": "system_plugin/link",
+    "data_config": {
+        "link_res_src": {
+            "type": "string"
+        },
+        "link_res_id":{
+            "type":"string"
+        }
+    },
+    "html": "{{#fn_link}}{{link_res_src}},{{link_res_id}}{{/fn_link}}"
+}

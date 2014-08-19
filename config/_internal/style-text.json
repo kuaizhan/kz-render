@@ -1,0 +1,9 @@
+{
+    "ename": "_internal/style-text",
+    "data_config": {
+        "style": {
+            "type": "string"
+        }
+    },
+    "html": "<style>{{style}}</style>"
+}

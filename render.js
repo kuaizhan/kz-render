@@ -9,69 +9,61 @@
 
 var mustache = require("mustache");
 var $ = require("node-jquery");
-//扩展render 的function
-var renderFn =require("./render_ext_fn");
 
-//基本渲染规则
-var comp_render_role = './render-role.json';
+var SYS_VAR = {
+    "container": "_containers_"
+}
 
-/*全部组件配置数据*/
-var comps = (function () {
 
-    var _lib = require(comp_render_role);
-    var _comps = {};
-    _lib.forEach(function (p) {
-        p.components.forEach(function (c) {
-            _comps[c.ename] = c;
-        })
-    });
-    return _comps;
-})();
 
-var _getClosestContainer = function ($dom, containerName) {
-    if ($dom.is("[data-container='" + containerName + "']")) {
-        return $dom;
+var getExtRender =function(el){
+    var s =el.ename.split("/");
+    try{
+        var renders = require("./config/"+s[0]+"/render");
+        return renders.render;
     }
-    var children = $dom.children();
-    var tmp =[];
-    for (var n = 0; n < children.length; n++) {
-        var _child =$(children[n]);
-        if (_child.is("[data-container='" + containerName + "']")) {
-            return _child;
-        } else {
-            tmp.push(_child);
-        }
-    }
-    for(var i=0;i<tmp.length;i++){
-        return _getClosestContainer(tmp[i],containerName);
+    catch(e){
+        return {};
     }
 }
 
 /*渲染一个组件*/
-var renderItem = function (template, data) {
-    var render_data = $.extend(true,data,renderFn.renderExtFn);
+var renderItem = function (el,html) {
+    var template=getTemplate(el),
+        data=el.value;
+    var render_data = $.extend(true, data, getExtRender(el), {
+        _sys_fn_container: function () {
 
-    var html = mustache.render(template, render_data);
+            return function (container_name, render) {
 
-    if (data["_containers_"]) {
-        var $dom = $(html);
-        for (var n in data["_containers_"]) {
-            var els = data["_containers_"][n].components;
-            var $container = _getClosestContainer($dom, n);
-            $container && $container.html(render(els));
+                var container = this[SYS_VAR.container][container_name];
+                var text = [];
+                for (var i = 0; i < container.components.length; i++) {
+                    var el = container.components[i];
+                    if (isRefComp(el)) {
+                        var els = getRefComps(el);
+                        els.forEach(function (el) {
+                            renderItem(el,text);
+                        });
+                    }
+                    renderItem(el,text);
+                }
+
+                return render(text.join(''));
+            }
         }
-        html = "";
-        for (var i = 0; i < $dom.length; i++) {
-            html += $dom[i].outerHTML;
-        }
-    }
 
-    return html;
+    });
+
+    html.push(mustache.render(template, render_data));
 }
 
 /*获取组件模板HTML*/
 var getTemplate = function (el) {
-    var pkg = comps[el.ename];
+    var s =el.ename.split("/");
+    var pkgPath = './config/'+s[0]+"/"+s[1]+".json";
+
+    var pkg = require(pkgPath);
 
     return  pkg && pkg.html;
 }
@@ -80,29 +72,18 @@ var getTemplate = function (el) {
 /*入口函数，根据组件列表构建html 返回*/
 
 var render = function (pageEls) {
-    var html = "";
+    var html = [];
     pageEls.forEach(function (el) {
 
-        //TODO: 当一个组件是引用组件时，可以获取这个引用组件对应JSON数据
-        /*
-         * if(el.is("引用组件")){
-         *
-         *     var els = 获取引用组件数据(el);
-         *     els.forEach(function(_el){
-         *         html += renderItem(getTemplate(_el), _el.value);
-         *     });
-         *
-         * }
-         */
         if (isRefComp(el)) {
             var els = getRefComps(el);
             els.forEach(function (_el) {
-                html += renderItem(getTemplate(_el), _el.value);
+                 renderItem( _el,html);
             });
         }
-        html += renderItem(getTemplate(el), el.value);
+        renderItem(el,html);
     });
-    return html;
+    return html.join('');
 }
 
 var isRefComp = function (el) {
@@ -113,21 +94,4 @@ var getRefComps = function (el) {
 }
 
 
-var _pageTemplate = (function () {
-    var fs = require('fs');
-    return fs.readFileSync("templates/default.html", 'utf-8')
-})();
-
-/*构建整个网页*/
-var renderPage = function (pageData) {
-    var headHTML = render(pageData.head);
-    var headerHTML = render(pageData.header);
-    var bodyHTML = render(pageData.body);
-    var footerHTML = render(pageData.footer);
-    return mustache.render(_pageTemplate, {head: headHTML, header: headerHTML, body: bodyHTML, footer: footerHTML});
-}
-
-
 exports.render = render;
-exports.renderItem = renderItem;
-exports.renderPage = renderPage;
