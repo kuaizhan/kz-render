@@ -1,0 +1,9 @@
+{
+    "ename": "_internal/html",
+    "data_config": {
+        "html": {
+            "type": "string"
+        }
+    },
+    "html": "{{{html}}}"
+}

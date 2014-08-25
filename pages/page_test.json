@@ -1,0 +1,154 @@
+[
+    {
+        "ename": "_internal/page",
+        "value": {
+            "_containers_": {
+                "head": {
+                    "name": "head",
+                    "components": [
+                        {
+                            "value": {
+                                "title": "测试站点-标题"
+                            },
+                            "ename": "_internal/head-title"
+
+                        },
+                        {
+                            "type": "refer",
+                            "value": {
+                                "path": "./pages/page_ref_partial-head.json"
+                            },
+                            "ename": "_internal/ref"
+                        },
+                        {
+                            "type": "refer",
+                            "value": {
+                                "path": "./pages/amazeui-blog-style.json"
+                            },
+                            "ename": "_internal/ref"
+                        }
+                    ]
+                },
+                "body": {
+                    "name": "body",
+                    "components": [
+                        {
+                            "value": {
+                                "container_opts": {
+                                    "c_1": {
+                                        "sm-width": 12,
+                                        "md-width": 3
+                                    },
+                                    "c_2": {
+                                        "sm-width": 6,
+                                        "md-width": 6
+                                    },
+
+                                    "c_4": {
+                                        "sm-width": 6,
+                                        "md-width": 3
+                                    }
+                                },
+                                "_containers_": {
+                                    "c_1": {
+                                        "name": "c_1",
+                                        "components": [
+                                            {
+                                                "ename": "system_plugin/text",
+                                                "value": {
+                                                    "richtext": "前所未有的中文云端字型服务，让您在 web 平台上自由使用高品质中文字体，跨平台、可搜寻，而且超美。云端字型是我们的事业，推广字型学知识是我们的志业。从字体出发，关心设计与我们的生活，justfont blog 正是為此而生。"
+                                                }
+                                            },
+                                            {
+                                                "ename": "amazeui/button",
+                                                "value": {
+                                                    "classes": [
+                                                        {
+                                                            "class": "success"
+                                                        },
+                                                        {
+                                                            "class": "sm"
+                                                        }
+                                                    ],
+                                                    "text": "更多 →"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "c_2": {
+                                        "name": "c_2",
+                                        "components": [
+                                            {
+                                                "ename": "system_plugin/text",
+                                                "value": {
+                                                    "richtext": "前所未有的中文云端字型服务，让您在 web 平台上自由使用高品质中文字体，跨平台、可搜寻，而且超美。云端字型是我们的事业，推广字型学知识是我们的志业。从字体出发，关心设计与我们的生活，justfont blog 正是為此而生。"
+                                                }
+                                            },
+                                            {
+                                                "ename": "amazeui/button",
+                                                "value": {
+                                                    "classes": [
+                                                        {
+                                                            "class": "success"
+                                                        },
+                                                        {
+                                                            "class": "sm"
+                                                        }
+                                                    ],
+                                                    "text": "更多 →"
+                                                }
+                                            }
+                                        ]
+                                    },
+
+
+                                    "c_4": {
+                                        "name": "c_4",
+                                        "components": [
+                                            {
+                                                "ename": "system_plugin/text",
+                                                "value": {
+                                                    "richtext": "前所未有的中文云端字型服务，让您在 web 平台上自由使用高品质中文字体，跨平台、可搜寻，而且超美。云端字型是我们的事业，推广字型学知识是我们的志业。从字体出发，关心设计与我们的生活，justfont blog 正是為此而生。"
+                                                }
+                                            },
+                                            {
+                                                "ename": "amazeui/button",
+                                                "value": {
+                                                    "classes": [
+                                                        {
+                                                            "class": "success"
+                                                        },
+                                                        {
+                                                            "class": "sm"
+                                                        }
+                                                    ],
+                                                    "text": "更多 →"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "ename": "amazeui/amazeui-layout"
+
+                        }
+                    ]
+                },
+                "bottom": {
+                    "name": "bottom",
+                    "components": [
+
+                        {
+                            "type": "refer",
+                            "value": {
+                                "path": "./pages/page_ref_partial-bottom.json"
+                            },
+                            "ename": "_internal/ref"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]
+

@@ -53,6 +53,14 @@
                                                     "tag":"字体"
                                                 }
 
+                                            } ,
+                                            {
+                                                "ename":"system_plugin/link",
+                                                "value":{
+                                                    "link_res_src":"link_res_src",
+                                                    "link_res_id":"link_res_id",
+                                                    "text":"更多"
+                                                }
                                             }
                                         ]
                                     } ,

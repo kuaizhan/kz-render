@@ -6,7 +6,8 @@
         },
         "link_res_id":{
             "type":"string"
-        }
+        },
+        "text":{}
     },
-    "html": "{{#fn_link}}{{link_res_src}},{{link_res_id}}{{/fn_link}}"
+    "html": "<a href=\"{{#fn_link}}{{link_res_src}},{{link_res_id}}{{/fn_link}}\">{{text}}</a>"
 }

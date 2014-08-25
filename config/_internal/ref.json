@@ -1,4 +1,4 @@
 {
     "ename": "_internal/ref",
-    "html": ""
+    "html": "{{#_sys_fn_ref}}path{{/_sys_fn_ref}}"
 }

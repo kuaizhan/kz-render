@@ -16,7 +16,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res){
     res.writeHead(200, {'Content-Type': 'text/html;charset=UTF-8'});
-    var data = require('./pages/page_full.json');
+    //var data = require('./pages/page_full.json');
+    var data = require('./pages/page_test.json');
     res.end(render.render(data));
 });
 

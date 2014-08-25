@@ -1,0 +1,4 @@
+{
+    "ename": "amazeui/amazeui-layout",
+    "html": "<div class=\"am-g am-g-fixed am-g-container {{classes}}\">{{#fn_dynamic_container}}{{/fn_dynamic_container}}</div>"
+}
